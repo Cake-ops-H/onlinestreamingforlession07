@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Pumpkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo">Cinema<span> Pumpkin</span></a>
+
+    <nav class="navigation">
+        <a href="#">Главная</a>
+        <a href="#films">Фильмы</a>
+        <a href="#schedule">Расписание</a>
+    </nav>
+
+    <form class="search">
+        <input type="search" placeholder="Найти фильм...">
+        <button type="submit">⌕</button>
+    </form>
+
+    <button class="login" onclick="openModal('loginModal')">
+        Войти
+    </button>
+
+    <button class="register" onclick="openModal('registerModal')">
+        Регистрация
+    </button>
+</header>
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Вход</h2>
+
+        <form>
+            <input type="text" placeholder="Логин" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+
+        <p>Нет аккаунта?
+            <a href="#" onclick="switchModal('registerModal')">Регистрация</a>
+        </p>
+    </div>
+</div>
+<div class="modal" id="registerModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Регистрация</h2>
+
+        <form>
+            <input type="text" placeholder="Придумайте логин" required>
+            <input type="email" placeholder="Электронная почта" required>
+            <input type="password" placeholder="Придумайте пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <p>Уже есть аккаунт?
+            <a href="#" onclick="switchModal('loginModal')">Войти</a>
+        </p>
+    </div>
+</div>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="label">Выбор редакции</p>
+            <h1>Кино начинается в китае</h1>
+            <p class="hero-text">
+                Выбирай лучшие фильмы, наслаждайся просмотром
+                и планируй следующий просмотр фильма.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#films" class="button">Смотреть фильмы</a>
+                <a href="#schedule" class="button secondary">
+                    Расписание
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="films-section" id="films">
+        <div class="section-heading">
+            <div>
+                <p class="label">КАТАЛОГ</p>
+                <h2>Рекомендованные фильмы и сериалы</h2>
+            </div>
+            <a href="#films" class="all-films">Все фильмы →</a>
+        </div>
+
+        <div class="films-grid">
+
+        <a href="Kino1.html" class="film-link">
+    <article class="film-card">
+        <img src="https://kinospoilers.ru/wp-content/uploads/2026/09/poster-273.jpg" alt="Обитель зла">
+        <div class="film-info">
+            <span class="rating">★ 7.3</span>
+            <h3>Обитель зла</h3>
+            <p>Хоррор | Боевик · 2026</p>
+        </div>
+    </article>
+    </a>
+               <a href="Kino2.html" class="film-link">
+    <article class="film-card">
+        <img src="img/spider-man.gif" alt="Человек-паук: Новый день">
+        <div class="film-info">
+            <span class="rating">★ 7.9</span>
+            <h3>Человек-паук: Новый день</h3>
+            <p>Боевик | Приключения · 2026</p>
+        </div>
+    </article>
+    </a>
+            <a href="Kino3.html" class="film-link">
+            <article class="film-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHVC5QdonQx4vUjMzCXC7sUFLsj5NRwqJDf5EIaqDPY7kR1B5LF2AoNiY&s=10" alt="Зловещие мертвецы 2">
+                <div class="film-info">
+                    <span class="rating">★ 7.6</span>
+                    <h3>Зловещие мертвецы 2</h3>
+                    <p>Ужасы | Комедия | Фэнтези · 1987</p>
+                </div>
+            </article>
+            </a>
+            <a href="Kino4.html" class="film-link">
+            <article class="film-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXuS0llubtwO-9rtpJNV33MEQhdt0CKgy8Dt-rkDVMfx9X83R5Oh51TCI1&s=10" alt="Аркейн">
+                <div class="film-info">
+                    <span class="rating">★ 8.7</span>
+                    <h3>Аркейн</h3>
+                    <p>Мультфильм | Фантастика | Фентэзи | Боевик | Драма · 2021</p>
+                </div>
+            </article>
+            </a>
+            <a href="Kino5.html" class="film-link">
+            <article class="film-card">
+                <img src="https://sun9-54.vkuserphoto.ru/impg/Cfq24X17fw6R9f5M6qOmPlIZbC_b04mu2e7FPQ/wPUwCR5YUP0.jpg?size=800x450&quality=95&keep_aspect_ratio=1&background=000000&sign=ce3501c353f935d757236fd6f794075a&type=video_thumb" alt="Киберпанк: Бегущие по краю">
+                <div class="film-info">
+                    <span class="rating">★ 7.9</span>
+                    <h3>Киберпанк: Бегущие по краю</h3>
+                    <p>Аниме | Мультфильм | Фантастика | Боевик · 2022</p>
+                </div>
+            </article>
+            <a href="Kino6.html" class="film-link">
+            <article class="film-card">
+                <img src="https://media.myshows.me/shows/normal/3/52/352e1656553f89e814fbe56769eff3f1.jpg" alt="Аватар: Семь убежищ">
+                <div class="film-info">
+                    <span class="rating">★ 7.0</span>
+                    <h3>Аватар: Семь убежищ</h3>
+                    <p>Мультфильм · 2026</p>
+                </div>
+            </article>
+            </a>
+            <a href="Kino7.html" class="film-link">
+            <article class="film-card">
+                <img src="img/weneedneverlose.gif" alt="Fate: Апокриф">
+                <div class="film-info">
+                    <span class="rating">★ 6.6</span>
+                    <h3>Fate: Апокриф</h3>
+                    <p>Мультфильм|Аниме|Фэнтези|Боевик|Драма · 2017</p>
+                </div>
+            </article>
+            </a>
+        </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+        <p class="label">Не пропусти</p>
+        <h2>Твой следующий фильм</h2>
+        <p>Выбирай фильм и смотри с наслаждением.</p>
+        <a href="#films" class="button">Выбрать фильм</a>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="#" class="logo">Cinema<span> Pumpkin</span></a>
+    <p> 2026 Cinema Pumpkin. Мир большого бреда вашей головы.</p>
+</footer>
+</body>
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+function closeModal() {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.style.display = "none";
+    });
+}
+
+function switchModal(id) {
+    closeModal();
+    openModal(id);
+}
+
+// Закрытие при нажатии вне окна
+document.querySelectorAll(".modal").forEach(modal => {
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+});
+
+// Закрытие клавишей Escape
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+</script>
+</html>
